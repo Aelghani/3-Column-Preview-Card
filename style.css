@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /* Primary */
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+
+/* Neutral */
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.62rem;
+    overflow: hidden;
+    margin-block: auto;
+}
+.container .card{
+    padding: 2.87rem 2.93rem;
+    width: 100%;
+}
+.container .card h1{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.12rem;
+    color: var(--Very-light-gray-background-headings-buttons);
+    margin: 2.25rem 0 1.75rem 0;
+}
+.container .card p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 0.93rem;
+    line-height: 160%;
+    letter-spacing: -0.015em;
+    color: var(--Transparent-white-paragraphs);
+    margin-bottom: 1.43rem;
+}
+.container .card button{
+    font-family: 'Lexend Deca', sans-serif;
+    border: none;
+    padding: 1rem 1.87rem;
+    border-radius: 1.87rem;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    font-weight: 400;
+    font-size: 0.93rem;
+    line-height: 100%;
+    letter-spacing: -0.015em;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+.container :nth-child(1).card{
+    background-color: var(--Bright-orange);
+}
+.container :nth-child(1).card button{
+    color: var(--Bright-orange);
+}
+
+.container :nth-child(2).card{
+    background-color: var(--Dark-cyan);
+}
+.container :nth-child(2).card button{
+    color: var(--Dark-cyan);
+}
+
+.container :nth-child(3).card{
+    background-color: var(--Very-dark-cyan);
+}
+.container :nth-child(3).card button{
+    color: var(--Very-dark-cyan);
+}
+
+.container .card button:hover{
+    background-color: transparent;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+
+
+
+
+@media (min-width: 357px) {
+    main{
+        padding: 5.18rem 1.37rem;
+        height: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 31.25rem;
+    }
+    .container .card{
+        max-width: 19.25rem;
+    }
+    main{
+        height: 100vh;
+        padding: 0;
+    }
+}
